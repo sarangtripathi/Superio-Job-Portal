@@ -6,8 +6,6 @@ const port = process.env.port || 5000;
 require('dotenv').config()
 // console.log(process.env.DB_user);
 // console.log(process.env.DB_password);
-// console.log(`DB_USER: ${process.env.DB_USER}`);
-// console.log(`DB_PASSWORD: ${process.env.DB_PASSWORD}`);
 
 // to connect server to frontend
 app.use(express.json());
@@ -66,7 +64,7 @@ async function run() {
       res.send(jobs);
     });
 
-    // get jobs my email
+    // get jobs by email
     app.get("/myJobs/:email", async (req, res) => {
       // console.log(req.params.email);
       const jobs = await jobsCollections
@@ -112,9 +110,9 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello!')
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on ${port}`)
+  console.log(`The app is listening on port: ${port}`)
 });
