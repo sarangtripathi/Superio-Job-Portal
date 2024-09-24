@@ -37,7 +37,7 @@ const UpdateJob = () => {
     data.skills = selectedOption;
     // console.log(data)
      // update the book object
-     fetch(`http://localhost:5000/update-job/${id}`, {
+     fetch(`https://superio-job-portal.onrender.com/update-job/${id}`, {
        method: "PATCH",
 
        headers: {

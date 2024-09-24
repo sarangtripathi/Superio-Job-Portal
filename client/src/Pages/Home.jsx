@@ -15,7 +15,7 @@ const Home = () => {
     useEffect(() => {
       setIsLoading(true);
       // fetch("jobs.json").then....
-      fetch("http://localhost:5000/all-jobs").then(res => res.json()).then(data => {
+      fetch("https://superio-job-portal.onrender.com/all-jobs").then(res => res.json()).then(data => {
         // console.log(data);
         setJobs(data);
         setIsLoading(false);

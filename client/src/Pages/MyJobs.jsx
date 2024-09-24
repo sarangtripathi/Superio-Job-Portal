@@ -14,7 +14,7 @@ const MyJobs = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:5000/myJobs/hr@accenture.com`)
+    fetch(`https://superio-job-portal.onrender.com/myJobs/hr@accenture.com`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -35,7 +35,7 @@ const MyJobs = () => {
   // delete a books
   const handleDelete = (id) => {
     // console.log(id)
-    fetch(`http://localhost:5000/jobs/${id}`, {
+    fetch(`https://superio-job-portal.onrender.com/jobs/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
